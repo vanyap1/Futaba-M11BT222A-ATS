@@ -1,0 +1,11 @@
+Pins definition:
+1. VCC (+5V)
+2. GND
+3. NC(no connection)
+4. EN(High:HV+Filament On; Low:Shut-down)
+5. DIN
+6. GND
+7. /SCL (invert)
+8. /STB (Invert)
+
+Driver Chip:PT6311

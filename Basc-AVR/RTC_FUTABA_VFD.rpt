@@ -1,0 +1,1363 @@
+Report       : RTC_FUTABA_VFD
+Date         : 12-23-2021
+Time         : 21:37:28
+
+Compiler     : BASCOM-AVR LIBRARY V 2.0.8.3
+Processor    : M328
+SRAM         : 800 hex
+EEPROM       : 400 hex
+ROMSIZE      : 8000 hex
+
+ROMIMAGE     : 16FC hex  -> Will fit into ROM
+ROMIMAGE     :  5884 dec
+FLASH USED   :  17  %
+BAUD         : 250000 Baud
+XTAL         : 16000000 Hz
+BAUD error   : 0.%
+
+Stack start  : 8FF hex
+Stack size   : FA hex
+S-Stacksize  : FA hex
+S-Stackstart : 806 hex
+Framesize    : FA hex
+Framestart   : 612 hex
+Space left   :  365  dec
+
+LCD DB7      : PORTB.7
+LCD DB6      : PORTB.6
+LCD DB5      : PORTB.5
+LCD DB4      : PORTB.4
+LCD E        : PORTB.3
+LCD RS       : PORTB.2
+LCD mode     :  4  bit
+
+--------------------------------------------------------------------------------
+Variable                         Type            Address(hex)   Address(dec)
+--------------------------------------------------------------------------------
+UBRR1                            Word              00CC          204 
+UBRR0                            Word              00C4          196 
+UBRR                             Word              00C4          196 
+OCR4B                            Word              00AA          170 
+OCR4A                            Word              00A8          168 
+ICR4                             Word              00A6          166 
+COMPARE4B                        Word              00AA          170 
+COMPARE4A                        Word              00A8          168 
+PWM4B                            Word              00AA          170 
+PWM4A                            Word              00A8          168 
+CAPTURE4                         Word              00A6          166 
+TCNT4                            Word              00A4          164 
+TIMER4                           Word              00A4          164 
+OCR3B                            Word              009A          154 
+OCR3A                            Word              0098          152 
+ICR3                             Word              0096          150 
+COMPARE3B                        Word              009A          154 
+COMPARE3A                        Word              0098          152 
+PWM3B                            Word              009A          154 
+PWM3A                            Word              0098          152 
+CAPTURE3                         Word              0096          150 
+TCNT3                            Word              0094          148 
+TIMER3                           Word              0094          148 
+OCR1B                            Word              008A          138 
+OCR1A                            Word              0088          136 
+ICR1                             Word              0086          134 
+TCNT1                            Word              0084          132 
+ADC                              Word              0078          120 
+SP                               Word              005D          93 
+EEAR                             Word              0041          65 
+COMPARE1B                        Word              008A          138 
+COMPARE1A                        Word              0088          136 
+PWM1B                            Word              008A          138 
+PWM1A                            Word              0088          136 
+CAPTURE1                         Word              0086          134 
+TIMER1                           Word              0084          132 
+HWSTACK                          Word              005D          93 
+SWSTACK                          Word              001C          28 
+FRAME                            Word              0004          4 
+R0                                                 0000          0 
+R1                                                 0001          1 
+R2                                                 0002          2 
+R3                                                 0003          3 
+R4                                                 0004          4 
+R5                                                 0005          5 
+R6                                                 0006          6 
+R7                                                 0007          7 
+R8                                                 0008          8 
+R9                                                 0009          9 
+R10                                                000A          10 
+R11                                                000B          11 
+R12                                                000C          12 
+R13                                                000D          13 
+R14                                                000E          14 
+R15                                                000F          15 
+R16                                                0010          16 
+R17                                                0011          17 
+R18                                                0012          18 
+R19                                                0013          19 
+R20                                                0014          20 
+R21                                                0015          21 
+R22                                                0016          22 
+R23                                                0017          23 
+R24                                                0018          24 
+R25                                                0019          25 
+R26                                                001A          26 
+R27                                                001B          27 
+R28                                                001C          28 
+R29                                                001D          29 
+R30                                                001E          30 
+R31                                                001F          31 
+ADCD                             Word              0078          120 
+COUNTER1                         Word              0084          132 
+TIMER1                           Word              0084          132 
+CAPTURE1                         Word              0086          134 
+CAPTURE3                         Word              0096          150 
+CAPTURE4                         Word              00A6          166 
+COMPARE1A                        Word              0088          136 
+PWM1A                            Word              0088          136 
+COMPARE1                         Word              0088          136 
+PWM1B                            Word              008A          138 
+COMPARE1B                        Word              008A          138 
+COUNTER3                         Word              0094          148 
+TIMER3                           Word              0094          148 
+COUNTER4                         Word              00A4          164 
+TIMER4                           Word              00A4          164 
+COMPARE3A                        Word              0098          152 
+PWM3A                            Word              0098          152 
+COMPARE3                         Word              0098          152 
+PWM3B                            Word              009A          154 
+COMPARE3B                        Word              009A          154 
+COMPARE4A                        Word              00A8          168 
+PWM4A                            Word              00A8          168 
+PWM4B                            Word              00AA          170 
+COMPARE4B                        Word              00AA          170 
+PWM0A                            Byte              0047          71 
+PWM0B                            Byte              0048          72 
+PWM2A                            Byte              00B3          179 
+PWM2B                            Byte              00B4          180 
+ERR                              Bit [2]           0006          6 
+VAR                              Byte(63)          0100          256 
+COUNT                            Byte              013F          319 
+VBAT                             Single            0140          320 
+W                                Word              0144          324 
+LIGHT                            Word              0146          326 
+RTC_TMP                          Byte              0148          328 
+DAY                              String * 3        0149          329 
+DATE$                            String * 8        0153          339 
+TIME$                            String * 8        015C          348 
+S1                               String * 100      0165          357 
+STR_COM1                         String * 100      01CA          458 
+S_BUF1                           Byte(100)         0165          357 
+S2                               String * 100      022F          559 
+STR_COM2                         String * 100      0294          660 
+S_BUF2                           Byte(100)         022F          559 
+STR_COM                          String * 100      02F9          761 
+B2                               Byte              035E          862 
+SERIAL_READY                     Bit [7]           035F          863 
+AR                               String(7) * 10    042E          1070 
+BCOUNT                           Byte              047B          1147 
+UPDATE_ICON_DELAY                Byte              047C          1148 
+TMP                              Byte              047D          1149 
+DIGS                             Byte              047E          1150 
+TEXT_STR                         String * 5        047F          1151 
+CHR_BUFF                         Byte(5)           047F          1151 
+DIGIT_STR                        String * 6        0485          1157 
+DOT                              Bit [6]           035F          863 
+DOT_COUNT                        Byte              048C          1164 
+DIG_BUFF                         Byte(6)           0485          1157 
+TMP_STR                          String * 12       048D          1165 
+SECOND_TICK                      Long              049A          1178 
+UPD_REQ                          Bit [5]           035F          863 
+BS                               Byte              04A2          1186 
+STAT                             Byte              04A3          1187 
+
+--------------------------------------------------------------------------------
+Constant                         Value
+--------------------------------------------------------------------------------
+TWAMR1                           &HDD
+TWCR1                            &HDC
+TWDR1                            &HDB
+TWAR1                            &HDA
+TWSR1                            &HD9
+TWBR1                            &HD8
+UDR1                             &HCE
+UBRR1H                           &HCD
+UBRR1L                           &HCC
+UCSR1D                           &HCB
+UCSR1C                           &HCA
+UCSR1B                           &HC9
+UCSR1A                           &HC8
+UDR0                             &HC6
+UDR                              &HC6
+UBRRHI                           &HC5
+UBRR0H                           &HC5
+UBRR0L                           &HC4
+UBRR                             &HC4
+UCSR0D                           &HC3
+UCSR0C                           &HC2
+UCSRC                            &HC2
+UCSR0B                           &HC1
+UCR                              &HC1
+UCSR0A                           &HC0
+USR                              &HC0
+TWAMR                            &HBD
+TWCR                             &HBC
+TWDR                             &HBB
+TWAR                             &HBA
+TWSR                             &HB9
+TWBR                             &HB8
+TWAMR0                           &HBD
+TWCR0                            &HBC
+TWDR0                            &HBB
+TWAR0                            &HBA
+TWSR0                            &HB9
+TWBR0                            &HB8
+ASSR                             &HB6
+OCR2B                            &HB4
+PWM2B                            &HB4
+COMPARE2B                        &HB4
+OCR2A                            &HB3
+COMPARE2A                        &HB3
+PWM2A                            &HB3
+TCNT2                            &HB2
+TIMER2                           &HB2
+COUNTER2                         &HB2
+TCCR2B                           &HB1
+TCCR2                            &HB1
+TCCR2A                           &HB0
+SPDR1                            &HAE
+SPSR1                            &HAD
+SPCR1                            &HAC
+OCR4BH                           &HAB
+OCR4BL                           &HAA
+OCR4AH                           &HA9
+OCR4AL                           &HA8
+ICR4H                            &HA7
+ICR4L                            &HA6
+TCNT4H                           &HA5
+TCNT4L                           &HA4
+TCCR4C                           &HA2
+TCCR4B                           &HA1
+TCCR4A                           &HA0
+OCR3BH                           &H9B
+OCR3BL                           &H9A
+OCR3AH                           &H99
+OCR3AL                           &H98
+ICR3H                            &H97
+ICR3L                            &H96
+TCNT3H                           &H95
+TCNT3L                           &H94
+TCCR3C                           &H92
+TCCR3B                           &H91
+TCCR3A                           &H90
+OCR1BH                           &H8B
+OCR1BL                           &H8A
+OCR1AH                           &H89
+OCR1AL                           &H88
+ICR1H                            &H87
+ICR1L                            &H86
+TCNT1H                           &H85
+TCNT1L                           &H84
+TCCR1C                           &H82
+TCCR1B                           &H81
+TCCR1A                           &H80
+DIDR1                            &H7F
+DIDR0                            &H7E
+ADMUX                            &H7C
+ADCSRB                           &H7B
+ADCSRA                           &H7A
+ADCSR                            &H7A
+ADCH                             &H79
+ADCL                             &H78
+PCMSK3                           &H73
+TIMSK4                           &H72
+TIMSK3                           &H71
+TIMSK2                           &H70
+TIMSK1                           &H6F
+TIMSK0                           &H6E
+PCMSK2                           &H6D
+PCMSK1                           &H6C
+PCMSK0                           &H6B
+EICRA                            &H69
+PCICR                            &H68
+OSCCAL                           &H66
+PRR1                             &H65
+PRR0                             &H64
+XFDCSR                           &H62
+CLKPR                            &H61
+WDTCSR                           &H60
+WDTCR                            &H60
+PTCEOC                           &H74
+PTCWCOMP                         &H75
+SREG                             &H3F
+SPH                              &H3E
+SPL                              &H3D
+SPMCSR                           &H37
+SPMCR                            &H37
+MCUCR                            &H35
+MCUSR                            &H34
+MCUCSR                           &H34
+SMCR                             &H33
+DWDR                             &H31
+ACSR                             &H30
+ACSRB                            &H2F
+SPDR0                            &H2E
+SPDR                             &H2E
+SPSR0                            &H2D
+SPSR                             &H2D
+SPCR0                            &H2C
+SPCR                             &H2C
+GPIOR2                           &H2B
+GPIOR1                           &H2A
+OCR0B                            &H28
+OCR0A                            &H27
+TCNT0                            &H26
+COUNTER0                         &H26
+TIMER0                           &H26
+TCCR0B                           &H25
+TCCR0A                           &H24
+GTCCR                            &H23
+EEARH                            &H22
+EEARL                            &H21
+EEDR                             &H20
+EECR                             &H1F
+GPIOR0                           &H1E
+EIMSK                            &H1D
+EIFR                             &H1C
+PCIFR                            &H1B
+TIFR4                            &H19
+TIFR3                            &H18
+TIFR2                            &H17
+TIFR1                            &H16
+TIFR0                            &H15
+PORTE                            &H0E
+DDRE                             &H0D
+PINE                             &H0C
+PORTD                            &H0B
+DDRD                             &H0A
+PIND                             &H09
+PORTC                            &H08
+DDRC                             &H07
+PINC                             &H06
+PORTB                            &H05
+DDRB                             &H04
+PINB                             &H03
+_ROMSIZE                         32768
+_CHIP                            60
+UDR00                            0
+UDR01                            1
+UDR02                            2
+UDR03                            3
+UDR04                            4
+UDR05                            5
+UDR06                            6
+UDR07                            7
+MPCM0                            0
+U2X0                             1
+UPE0                             2
+DOR0                             3
+FE0                              4
+UDRE0                            5
+TXC0                             6
+RXC0                             7
+TXB80                            0
+RXB80                            1
+UCSZ02                           2
+TXEN0                            3
+RXEN0                            4
+UDRIE0                           5
+TXCIE0                           6
+RXCIE0                           7
+RXIE                             7
+RXS                              6
+SFDE                             5
+UCPOL0                           0
+UCSZ00                           1
+UCSZ01                           2
+USBS0                            3
+UPM00                            4
+UPM01                            5
+UMSEL00                          6
+UMSEL01                          7
+UBRR0H0                          0
+UBRR0H1                          1
+UBRR0H2                          2
+UBRR0H3                          3
+UBRR0L0                          0
+UBRR0L1                          1
+UBRR0L2                          2
+UBRR0L3                          3
+UBRR0L4                          4
+UBRR0L5                          5
+UBRR0L6                          6
+UBRR0L7                          7
+UDR10                            0
+UDR11                            1
+UDR12                            2
+UDR13                            3
+UDR14                            4
+UDR15                            5
+UDR16                            6
+UDR17                            7
+MPCM1                            0
+U2X1                             1
+UPE1                             2
+DOR1                             3
+FE1                              4
+UDRE1                            5
+TXC1                             6
+RXC1                             7
+TXB81                            0
+RXB81                            1
+UCSZ12                           2
+TXEN1                            3
+RXEN1                            4
+UDRIE1                           5
+TXCIE1                           6
+RXCIE1                           7
+UCPOL1                           0
+UCSZ10                           1
+UCSZ11                           2
+USBS1                            3
+UPM10                            4
+UPM11                            5
+UMSEL10                          6
+UMSEL11                          7
+UBRR1H0                          0
+UBRR1H1                          1
+UBRR1H2                          2
+UBRR1H3                          3
+UBRR1L0                          0
+UBRR1L1                          1
+UBRR1L2                          2
+UBRR1L3                          3
+UBRR1L4                          4
+UBRR1L5                          5
+UBRR1L6                          6
+UBRR1L7                          7
+TWAM00                           1
+TWAM01                           2
+TWAM02                           3
+TWAM03                           4
+TWAM04                           5
+TWAM05                           6
+TWAM06                           7
+TWBR00                           0
+TWBR01                           1
+TWBR02                           2
+TWBR03                           3
+TWBR04                           4
+TWBR05                           5
+TWBR06                           6
+TWBR07                           7
+TWIE                             0
+TWEN                             2
+TWWC                             3
+TWSTO                            4
+TWSTA                            5
+TWEA                             6
+TWINT                            7
+TWIE0                            0
+TWEN0                            2
+TWWC0                            3
+TWSTO0                           4
+TWSTA0                           5
+TWEA0                            6
+TWINT0                           7
+TWPS00                           0
+TWPS01                           1
+TWS03                            3
+TWS04                            4
+TWS05                            5
+TWS06                            6
+TWS07                            7
+TWDR00                           0
+TWDR01                           1
+TWDR02                           2
+TWDR03                           3
+TWDR04                           4
+TWDR05                           5
+TWDR06                           6
+TWDR07                           7
+TWGCE0                           0
+TWA00                            1
+TWA01                            2
+TWA02                            3
+TWA03                            4
+TWA04                            5
+TWA05                            6
+TWA06                            7
+TWAM10                           1
+TWAM11                           2
+TWAM12                           3
+TWAM13                           4
+TWAM14                           5
+TWAM15                           6
+TWAM16                           7
+TWBR10                           0
+TWBR11                           1
+TWBR12                           2
+TWBR13                           3
+TWBR14                           4
+TWBR15                           5
+TWBR16                           6
+TWBR17                           7
+TWIE1                            0
+TWEN1                            2
+TWWC1                            3
+TWSTO1                           4
+TWSTA1                           5
+TWEA1                            6
+TWINT1                           7
+TWPS10                           0
+TWPS11                           1
+TWS13                            3
+TWS14                            4
+TWS15                            5
+TWS16                            6
+TWS17                            7
+TWDR10                           0
+TWDR11                           1
+TWDR12                           2
+TWDR13                           3
+TWDR14                           4
+TWDR15                           5
+TWDR16                           6
+TWDR17                           7
+TWGCE1                           0
+TWA10                            1
+TWA11                            2
+TWA12                            3
+TWA13                            4
+TWA14                            5
+TWA15                            6
+TWA16                            7
+TOIE1                            0
+OCIE1A                           1
+OCIE1B                           2
+ICIE1                            5
+TICIE1                           5
+TOV1                             0
+OCF1A                            1
+OCF1B                            2
+ICF1                             5
+WGM10                            0
+WGM11                            1
+COM1B0                           4
+COM1B1                           5
+COM1A0                           6
+COM1A1                           7
+CS10                             0
+CS11                             1
+CS12                             2
+WGM12                            3
+WGM13                            4
+ICES1                            6
+ICNC1                            7
+FOC1B                            6
+FOC1A                            7
+TCNT1H0                          0
+TCNT1H1                          1
+TCNT1H2                          2
+TCNT1H3                          3
+TCNT1H4                          4
+TCNT1H5                          5
+TCNT1H6                          6
+TCNT1H7                          7
+TCNT1L0                          0
+TCNT1L1                          1
+TCNT1L2                          2
+TCNT1L3                          3
+TCNT1L4                          4
+TCNT1L5                          5
+TCNT1L6                          6
+TCNT1L7                          7
+OCR1AH0                          0
+OCR1AH1                          1
+OCR1AH2                          2
+OCR1AH3                          3
+OCR1AH4                          4
+OCR1AH5                          5
+OCR1AH6                          6
+OCR1AH7                          7
+OCR1AL0                          0
+OCR1AL1                          1
+OCR1AL2                          2
+OCR1AL3                          3
+OCR1AL4                          4
+OCR1AL5                          5
+OCR1AL6                          6
+OCR1AL7                          7
+OCR1BH0                          0
+OCR1BH1                          1
+OCR1BH2                          2
+OCR1BH3                          3
+OCR1BH4                          4
+OCR1BH5                          5
+OCR1BH6                          6
+OCR1BH7                          7
+OCR1BL0                          0
+OCR1BL1                          1
+OCR1BL2                          2
+OCR1BL3                          3
+OCR1BL4                          4
+OCR1BL5                          5
+OCR1BL6                          6
+OCR1BL7                          7
+ICR1H0                           0
+ICR1H1                           1
+ICR1H2                           2
+ICR1H3                           3
+ICR1H4                           4
+ICR1H5                           5
+ICR1H6                           6
+ICR1H7                           7
+ICR1L0                           0
+ICR1L1                           1
+ICR1L2                           2
+ICR1L3                           3
+ICR1L4                           4
+ICR1L5                           5
+ICR1L6                           6
+ICR1L7                           7
+PSRSYNC                          0
+TSM                              7
+TOIE2                            0
+OCIE2A                           1
+OCIE2B                           2
+TOV2                             0
+OCF2A                            1
+OCF2B                            2
+WGM20                            0
+WGM21                            1
+COM2B0                           4
+COM2B1                           5
+COM2A0                           6
+COM2A1                           7
+CS20                             0
+CS21                             1
+CS22                             2
+WGM22                            3
+FOC2B                            6
+FOC2A                            7
+TCNT20                           0
+TCNT21                           1
+TCNT22                           2
+TCNT23                           3
+TCNT24                           4
+TCNT25                           5
+TCNT26                           6
+TCNT27                           7
+OCR2B0                           0
+OCR2B1                           1
+OCR2B2                           2
+OCR2B3                           3
+OCR2B4                           4
+OCR2B5                           5
+OCR2B6                           6
+OCR2B7                           7
+OCR2A0                           0
+OCR2A1                           1
+OCR2A2                           2
+OCR2A3                           3
+OCR2A4                           4
+OCR2A5                           5
+OCR2A6                           6
+OCR2A7                           7
+TCR2BUB                          0
+TCR2AUB                          1
+OCR2BUB                          2
+OCR2AUB                          3
+TCN2UB                           4
+AS2                              5
+EXCLK                            6
+PSRASY                           1
+TOIE3                            0
+OCIE3A                           1
+OCIE3B                           2
+ICIE3                            5
+TICIE3                           5
+TOV3                             0
+OCF3A                            1
+OCF3B                            2
+ICF3                             5
+WGM30                            0
+WGM31                            1
+COM3B0                           4
+COM3B1                           5
+COM3A0                           6
+COM3A1                           7
+CS30                             0
+CS31                             1
+CS32                             2
+WGM32                            3
+WGM33                            4
+ICES3                            6
+ICNC3                            7
+FOC3B                            6
+FOC3A                            7
+TCNT3H0                          0
+TCNT3H1                          1
+TCNT3H2                          2
+TCNT3H3                          3
+TCNT3H4                          4
+TCNT3H5                          5
+TCNT3H6                          6
+TCNT3H7                          7
+TCNT3L0                          0
+TCNT3L1                          1
+TCNT3L2                          2
+TCNT3L3                          3
+TCNT3L4                          4
+TCNT3L5                          5
+TCNT3L6                          6
+TCNT3L7                          7
+OCR3AH0                          0
+OCR3AH1                          1
+OCR3AH2                          2
+OCR3AH3                          3
+OCR3AH4                          4
+OCR3AH5                          5
+OCR3AH6                          6
+OCR3AH7                          7
+OCR3AL0                          0
+OCR3AL1                          1
+OCR3AL2                          2
+OCR3AL3                          3
+OCR3AL4                          4
+OCR3AL5                          5
+OCR3AL6                          6
+OCR3AL7                          7
+OCR3BH0                          0
+OCR3BH1                          1
+OCR3BH2                          2
+OCR3BH3                          3
+OCR3BH4                          4
+OCR3BH5                          5
+OCR3BH6                          6
+OCR3BH7                          7
+OCR3BL0                          0
+OCR3BL1                          1
+OCR3BL2                          2
+OCR3BL3                          3
+OCR3BL4                          4
+OCR3BL5                          5
+OCR3BL6                          6
+OCR3BL7                          7
+ICR3H0                           0
+ICR3H1                           1
+ICR3H2                           2
+ICR3H3                           3
+ICR3H4                           4
+ICR3H5                           5
+ICR3H6                           6
+ICR3H7                           7
+ICR3L0                           0
+ICR3L1                           1
+ICR3L2                           2
+ICR3L3                           3
+ICR3L4                           4
+ICR3L5                           5
+ICR3L6                           6
+ICR3L7                           7
+TOIE4                            0
+OCIE4A                           1
+OCIE4B                           2
+ICIE4                            5
+TICIE4                           5
+TOV4                             0
+OCF4A                            1
+OCF4B                            2
+ICF4                             5
+WGM40                            0
+WGM41                            1
+COM4B0                           4
+COM4B1                           5
+COM4A0                           6
+COM4A1                           7
+CS40                             0
+CS41                             1
+CS42                             2
+WGM42                            3
+WGM43                            4
+ICES4                            6
+ICNC4                            7
+FOC4B                            6
+FOC4A                            7
+TCNT4H0                          0
+TCNT4H1                          1
+TCNT4H2                          2
+TCNT4H3                          3
+TCNT4H4                          4
+TCNT4H5                          5
+TCNT4H6                          6
+TCNT4H7                          7
+TCNT4L0                          0
+TCNT4L1                          1
+TCNT4L2                          2
+TCNT4L3                          3
+TCNT4L4                          4
+TCNT4L5                          5
+TCNT4L6                          6
+TCNT4L7                          7
+OCR4AH0                          0
+OCR4AH1                          1
+OCR4AH2                          2
+OCR4AH3                          3
+OCR4AH4                          4
+OCR4AH5                          5
+OCR4AH6                          6
+OCR4AH7                          7
+OCR4AL0                          0
+OCR4AL1                          1
+OCR4AL2                          2
+OCR4AL3                          3
+OCR4AL4                          4
+OCR4AL5                          5
+OCR4AL6                          6
+OCR4AL7                          7
+OCR4BH0                          0
+OCR4BH1                          1
+OCR4BH2                          2
+OCR4BH3                          3
+OCR4BH4                          4
+OCR4BH5                          5
+OCR4BH6                          6
+OCR4BH7                          7
+OCR4BL0                          0
+OCR4BL1                          1
+OCR4BL2                          2
+OCR4BL3                          3
+OCR4BL4                          4
+OCR4BL5                          5
+OCR4BL6                          6
+OCR4BL7                          7
+ICR4H0                           0
+ICR4H1                           1
+ICR4H2                           2
+ICR4H3                           3
+ICR4H4                           4
+ICR4H5                           5
+ICR4H6                           6
+ICR4H7                           7
+ICR4L0                           0
+ICR4L1                           1
+ICR4L2                           2
+ICR4L3                           3
+ICR4L4                           4
+ICR4L5                           5
+ICR4L6                           6
+ICR4L7                           7
+MUX0                             0
+MUX1                             1
+MUX2                             2
+MUX3                             3
+ADLAR                            5
+REFS0                            6
+REFS1                            7
+ADCH0                            0
+ADCH1                            1
+ADCH2                            2
+ADCH3                            3
+ADCH4                            4
+ADCH5                            5
+ADCH6                            6
+ADCH7                            7
+ADCL0                            0
+ADCL1                            1
+ADCL2                            2
+ADCL3                            3
+ADCL4                            4
+ADCL5                            5
+ADCL6                            6
+ADCL7                            7
+ADPS0                            0
+ADPS1                            1
+ADPS2                            2
+ADIE                             3
+ADIF                             4
+ADATE                            5
+ADSC                             6
+ADEN                             7
+ADTS0                            0
+ADTS1                            1
+ADTS2                            2
+ACME                             6
+ADC0D                            0
+ADC1D                            1
+ADC2D                            2
+ADC3D                            3
+ADC4D                            4
+ADC5D                            5
+ACIS0                            0
+ACIS1                            1
+ACIC                             2
+ACIE                             3
+ACI                              4
+ACO                              5
+ACBG                             6
+ACD                              7
+ACOE                             0
+AIN0D                            0
+AIN1D                            1
+PORTB0                           0
+PORTB1                           1
+PORTB2                           2
+PORTB3                           3
+PORTB4                           4
+PORTB5                           5
+PORTB6                           6
+PORTB7                           7
+DDRB0                            0
+DDRB1                            1
+DDRB2                            2
+DDRB3                            3
+DDRB4                            4
+DDRB5                            5
+DDRB6                            6
+DDRB7                            7
+PINB0                            0
+PINB1                            1
+PINB2                            2
+PINB3                            3
+PINB4                            4
+PINB5                            5
+PINB6                            6
+PINB7                            7
+PORTC0                           0
+PORTC1                           1
+PORTC2                           2
+PORTC3                           3
+PORTC4                           4
+PORTC5                           5
+PORTC6                           6
+DDRC0                            0
+DDRC1                            1
+DDRC2                            2
+DDRC3                            3
+DDRC4                            4
+DDRC5                            5
+DDRC6                            6
+PINC0                            0
+PINC1                            1
+PINC2                            2
+PINC3                            3
+PINC4                            4
+PINC5                            5
+PINC6                            6
+PORTD0                           0
+PORTD1                           1
+PORTD2                           2
+PORTD3                           3
+PORTD4                           4
+PORTD5                           5
+PORTD6                           6
+PORTD7                           7
+DDRD0                            0
+DDRD1                            1
+DDRD2                            2
+DDRD3                            3
+DDRD4                            4
+DDRD5                            5
+DDRD6                            6
+DDRD7                            7
+PIND0                            0
+PIND1                            1
+PIND2                            2
+PIND3                            3
+PIND4                            4
+PIND5                            5
+PIND6                            6
+PIND7                            7
+PORTE0                           0
+PORTE1                           1
+PORTE2                           2
+PORTE3                           3
+DDRE0                            0
+DDRE1                            1
+DDRE2                            2
+DDRE3                            3
+PINE0                            0
+PINE1                            1
+PINE2                            2
+PINE3                            3
+OCR0B0                           0
+OCR0B1                           1
+OCR0B2                           2
+OCR0B3                           3
+OCR0B4                           4
+OCR0B5                           5
+OCR0B6                           6
+OCR0B7                           7
+OCR0A0                           0
+OCR0A1                           1
+OCR0A2                           2
+OCR0A3                           3
+OCR0A4                           4
+OCR0A5                           5
+OCR0A6                           6
+OCR0A7                           7
+TCNT00                           0
+TCNT01                           1
+TCNT02                           2
+TCNT03                           3
+TCNT04                           4
+TCNT05                           5
+TCNT06                           6
+TCNT07                           7
+CS00                             0
+CS01                             1
+CS02                             2
+WGM02                            3
+FOC0B                            6
+FOC0A                            7
+WGM00                            0
+WGM01                            1
+COM0B0                           4
+COM0B1                           5
+COM0A0                           6
+COM0A1                           7
+TOIE0                            0
+OCIE0A                           1
+OCIE0B                           2
+TOV0                             0
+OCF0A                            1
+OCF0B                            2
+ISC00                            0
+ISC01                            1
+ISC10                            2
+ISC11                            3
+INT0                             0
+INT1                             1
+INTF0                            0
+INTF1                            1
+PCIE0                            0
+PCIE1                            1
+PCIE2                            2
+PCIE3                            3
+PCINT24                          0
+PCINT25                          1
+PCINT26                          2
+PCINT27                          3
+PCINT16                          0
+PCINT17                          1
+PCINT18                          2
+PCINT19                          3
+PCINT20                          4
+PCINT21                          5
+PCINT22                          6
+PCINT23                          7
+PCINT8                           0
+PCINT9                           1
+PCINT10                          2
+PCINT11                          3
+PCINT12                          4
+PCINT13                          5
+PCINT14                          6
+PCINT0                           0
+PCINT1                           1
+PCINT2                           2
+PCINT3                           3
+PCINT4                           4
+PCINT5                           5
+PCINT6                           6
+PCINT7                           7
+PCIF0                            0
+PCIF1                            1
+PCIF2                            2
+PCIF3                            3
+SPDR00                           0
+SPDR01                           1
+SPDR02                           2
+SPDR03                           3
+SPDR04                           4
+SPDR05                           5
+SPDR06                           6
+SPDR07                           7
+SPI2X0                           0
+WCOL0                            6
+SPIF0                            7
+SPR00                            0
+SPR01                            1
+CPHA0                            2
+CPOL0                            3
+MSTR0                            4
+DORD0                            5
+SPE0                             6
+SPIE0                            7
+SPDR10                           0
+SPDR11                           1
+SPDR12                           2
+SPDR13                           3
+SPDR14                           4
+SPDR15                           5
+SPDR16                           6
+SPDR17                           7
+SPI2X1                           0
+WCOL1                            6
+SPIF1                            7
+SPR10                            0
+SPR11                            1
+CPHA1                            2
+CPOL1                            3
+MSTR1                            4
+DORD1                            5
+SPE1                             6
+SPIE1                            7
+WDE                              3
+WDCE                             4
+WDP0                             0
+WDP1                             1
+WDP2                             2
+WDP3                             5
+WDIE                             6
+WDIF                             7
+PRADC                            0
+PRUSART0                         1
+PRSPI0                           2
+PRTIM1                           3
+PRUSART1                         4
+PRTIM0                           5
+PRTIM2                           6
+PRTWI0                           7
+PRTIM3                           0
+PRSPI1                           2
+PRTIM4                           3
+PRPTC                            4
+PRTWI1                           5
+OSCCAL0                          0
+OSCCAL1                          1
+OSCCAL2                          2
+OSCCAL3                          3
+OSCCAL4                          4
+OSCCAL5                          5
+OSCCAL6                          6
+OSCCAL7                          7
+CLKPS0                           0
+CLKPS1                           1
+CLKPS2                           2
+CLKPS3                           3
+CLKPCE                           7
+SREG_C                           0
+SREG_Z                           1
+SREG_N                           2
+SREG_V                           3
+SREG_S                           4
+SREG_H                           5
+SREG_T                           6
+SREG_I                           7
+SPH0                             0
+SPH1                             1
+SPH2                             2
+SPH3                             3
+SPL0                             0
+SPL1                             1
+SPL2                             2
+SPL3                             3
+SPL4                             4
+SPL5                             5
+SPL6                             6
+SPL7                             7
+SPMEN                            0
+PGERS                            1
+PGWRT                            2
+BLBSET                           3
+RWWSRE                           4
+SIGRD                            5
+RWWSB                            6
+SPMIE                            7
+IVCE                             0
+IVSEL                            1
+PUD                              4
+BODSE                            5
+BODS                             6
+PORF                             0
+EXTRF                            1
+BORF                             2
+WDRF                             3
+SE                               0
+SM0                              1
+SM1                              2
+SM2                              3
+GPIOR20                          0
+GPIOR21                          1
+GPIOR22                          2
+GPIOR23                          3
+GPIOR24                          4
+GPIOR25                          5
+GPIOR26                          6
+GPIOR27                          7
+GPIOR10                          0
+GPIOR11                          1
+GPIOR12                          2
+GPIOR13                          3
+GPIOR14                          4
+GPIOR15                          5
+GPIOR16                          6
+GPIOR17                          7
+GPIOR00                          0
+GPIOR01                          1
+GPIOR02                          2
+GPIOR03                          3
+GPIOR04                          4
+GPIOR05                          5
+GPIOR06                          6
+GPIOR07                          7
+EEARH0                           0
+EEARH1                           1
+EEARL0                           0
+EEARL1                           1
+EEARL2                           2
+EEARL3                           3
+EEARL4                           4
+EEARL5                           5
+EEARL6                           6
+EEARL7                           7
+EEDR0                            0
+EEDR1                            1
+EEDR2                            2
+EEDR3                            3
+EEDR4                            4
+EEDR5                            5
+EEDR6                            6
+EEDR7                            7
+EERE                             0
+EEPE                             1
+EEMPE                            2
+EERIE                            3
+EEPM0                            4
+EEPM1                            5
+BODLEVEL0                        0
+BODLEVEL1                        1
+BODLEVEL2                        2
+CFD                              3
+BOOTRST                          0
+BOOTSZ0                          1
+BOOTSZ1                          2
+EESAVE                           3
+WDTON                            4
+SPIEN                            5
+DWEN                             6
+RSTDISBL                         7
+SUT_CKSEL0                       0
+SUT_CKSEL1                       1
+SUT_CKSEL2                       2
+SUT_CKSEL3                       3
+SUT_CKSEL4                       4
+SUT_CKSEL5                       5
+CKOUT                            6
+CKDIV8                           7
+LB1                              0
+LB2                              1
+BLB01                            2
+BLB02                            3
+BLB11                            4
+BLB12                            5
+XFDIE                            0
+XFDIF                            1
+PTC_EOC_EN                       0
+PTC_EOC_INT                      1
+PTC_WCOMP_EN                     2
+PTC_WCOMP_INT                    3
+_RESET                           0
+_DATE_FORMAT                     2
+_DATE_SEPARATOR                  46
+_GSTRBUF                         1554
+_DECIMALPOINT                    46
+_RTSCTS                          0
+_RTSCTS1                         0
+_RTSCTS3                         0
+_RTSCTS4                         0
+_RTSCTS5                         0
+_RTSCTS6                         0
+_RTSCTS7                         0
+_RTSCTS8                         0
+_RAMSIZE                         2048
+_ERAMSIZE                        1024
+_SIM                             0
+_HUGE                            0
+_BASE                            1
+_XTAL                            16000000
+_BUILD                           20830
+_COMPILER                        90
+_HWMUL                           1
+_DOSFILEWRITE                    0
+_DOSDIRWRITE                     0
+_1WEXT                           0
+_ADC_REFMODEL                    1
+_UARTS                           2
+_HWSTACKSTART                    2303
+_TIMEOUT                         1
+_PBIN_EXTENDED                   0
+_SPI_EXTENDED                    0
+_INPBIN_EXTENDED                 0
+_BIGSTRINGS                      0
+SEROUT_EXTPULL                   1
+_FPROTECT                        0
+_HWSTACK_LOW                     &H0805
+_SWSTACK_LOW                     &H070C
+_FRAME_HIGH                      &H070D
+_XMEGA                           0
+_XTINY                           0
+_VERSION_MAJOR                   1
+_VERSION_MINOR                   2
+_VERSION_BUILD                   352
+_USERCLOCK                       1
+_RS232_BUFSIZE0                  100
+_RS232_BUFSIZE_IN0P1             101
+_CHECKCHAR0                      0
+_RS232_BUFSIZE1                  100
+_RS232_BUFSIZE_IN1P1             101
+_CHECKCHAR1                      2
+TRANS                            &HD1
+AUTO                             &HD4
+EPG                              &HD7
+USB                              &HDD
+MAIL                             &HE0
+TITLE                            &HCE
+CHP                              &HC8
+TRK                              &HC5
+CH                               &HC2
+RATE                             &HCB
+_SDA                             0
+_SCL                             1
+___I2CDELAY                      1
+CBITINFINITY                     0
+CMBITINFINITY                    1
+CBITZERO                         1
+CMBITZERO                        2
+CBITNAN                          2
+CMBITNAN                         4
+CBITNANIFINF                     3
+CMBITNANIFINF                    8
+CBITNANIFMINUS                   4
+CMBITNANIFMINUS                  16
+CBITSIGN                         7
+CMBITSIGN                        128
+CEXPADDOFFSET                    0
+CEXPSUBOFFSET                    12
+CEXPMULOFFSET                    24
+CEXPDIVOFFSET                    36
+
+
+--------------------------------------------------------------------------------
+Warnings:
+--------------------------------------------------------------------------------
+ADCD                             not used
+COMPARE1                         not used
+COUNTER3                         not used
+COUNTER4                         not used
+COMPARE3                         not used
+PWM0A                            not used
+PWM0B                            not used
+COUNT                            not used
+VBAT                             not used
+W                                not used
+DAY                              not used
+STR_COM1                         not used
+S_BUF1                           not used
+STR_COM2                         not used
+S_BUF2                           not used
+SECOND_TICK                      not used
+
+Source string could be too big to fit into target string [___TEMP1>AR(5)]  in line  199 
+Source string could be too big to fit into target string [AR(3)>TIME$]  in line  203 
+Source string could be too big to fit into target string [AR(5)>TEXT_STR]  in line  228 
