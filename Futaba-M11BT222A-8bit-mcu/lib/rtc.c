@@ -30,16 +30,16 @@ void rtc_int_enable(rtc_date *RTCx , const uint16_t int_time){
 	rtc_config_3[0] |= (1 << TIE);
 	rtc_config_2[0] |= (1 << TD) | (1 << TE);
 	
-	twi0_write(RTC_ADDR,TIMER_COUNTER0_REG,rtc_config_1,sizeof(rtc_config_1));
-	twi0_write(RTC_ADDR,EXT_REG,rtc_config_2,sizeof(rtc_config_2));
-	twi0_write(RTC_ADDR,CONTROLL_REG,rtc_config_3,sizeof(rtc_config_3));
+	twi1_write(RTC_ADDR,TIMER_COUNTER0_REG,rtc_config_1,sizeof(rtc_config_1));
+	twi1_write(RTC_ADDR,EXT_REG,rtc_config_2,sizeof(rtc_config_2));
+	twi1_write(RTC_ADDR,CONTROLL_REG,rtc_config_3,sizeof(rtc_config_3));
 	
 	
 }
 
 void rtc_sync(rtc_date *RTCx){
 	uint8_t rtc_raw[7];
-	twi0_read(RTC_ADDR, 0x00, rtc_raw, sizeof(rtc_raw));
+	twi1_read(RTC_ADDR, 0x00, rtc_raw, sizeof(rtc_raw));
 	RTCx->second=BCDtoDEC(rtc_raw[0]);
 	RTCx->minute=BCDtoDEC(rtc_raw[1]);
 	RTCx->hour=BCDtoDEC(rtc_raw[2]);
@@ -57,7 +57,7 @@ void rtc_set(rtc_date *RTCx){
 	rtc_raw[4]=DECtoBCD(RTCx->date);
 	rtc_raw[5]=DECtoBCD(RTCx->month);
 	rtc_raw[6]=DECtoBCD(RTCx->year);
-	twi0_write(RTC_ADDR,0x00,rtc_raw,sizeof(rtc_raw));
+	twi1_write(RTC_ADDR,0x00,rtc_raw,sizeof(rtc_raw));
 }
 
 uint8_t BCDtoDEC(uint8_t val)

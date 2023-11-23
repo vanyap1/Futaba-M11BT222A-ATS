@@ -11,7 +11,7 @@
 #include <util/delay.h>
 #include <avr/interrupt.h>
 #include <avr/sleep.h>
-
+#include <stdint.h>
 
 #include "string.h"
 #include "stdbool.h"
@@ -27,8 +27,17 @@
 
 gpio rtc_int = {(uint8_t *)&PORTD , PORTD2};
 gpio ld1 = {(uint8_t *)&PORTB , PORTB5};		//debug led
-rtc_date sys_rtc = {0, 42, 13, 8, 5, 23, 2};
-	
+uint8_t redDotLine = 1;
+
+rtc_date sys_rtc = {
+	.date = 23,
+	.month = 11,
+	.year = 23,
+	.dayofweek = 5,
+	.hour = 23,
+	.minute = 35,
+	.second = 00
+};
 	
 uint8_t rtc_int_request = 0;
 uint16_t counter = 0;
@@ -58,8 +67,8 @@ int main(void)
    
    pt63Init();
    pt63SetBrightness(10);
-	 
-   
+   setIcon(TILE_AUTO, true);	 
+   setIcon(TILE_USB, true);
     while (1) 
     {
 		
@@ -77,7 +86,7 @@ int main(void)
 		//setIcon(TILE_RATE, true);
 		//
 		//setTile(TILE_NETRING, 0xffff);
-		setTile(TILE_OTHER, (0b1001 << 8));
+		
 		//setTile(TILE_BINFIELD, 0xffff);
 		//setTile(TILE_DISK, 0xff);
 		//
@@ -98,18 +107,27 @@ int main(void)
 		//setTile(TILE_BINFIELD, 0x0);
 		//setTile(TILE_DISK, 0x0);
 		
-		_delay_ms(50);
+		if (rtc_int_request){
+			rtc_sync(&sys_rtc);
+			
+			sprintf(char_array, "%02d-%02d", sys_rtc.month, sys_rtc.date);
+			writeChars((void *)char_array, 5);
+			sprintf(char_array, "%02d%02d%02d", sys_rtc.hour, sys_rtc.minute, sys_rtc.second);
+			writeDigits((void *)char_array, 1, 6);
+			setTile(TILE_BINFIELD, counter);
+			setTile(TILE_OTHER, (redDotLine << 8));
+			redDotLine = redDotLine << 1;
+			redDotLine = (redDotLine > 8) ? 1 : redDotLine;
+			
+			counter++;
+			rtc_int_request=0;
+		}
 		
 		
 		
 		
 		
-		sprintf(char_array, "%05d", counter);
-		writeChars(char_array, 5);
-		sprintf(char_array, "%06d", counter);
-		writeDigits(char_array, 1, 6);
-		setTile(TILE_BINFIELD, counter);
-		counter++;
+		
     }
 }
 

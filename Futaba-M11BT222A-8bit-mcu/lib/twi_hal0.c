@@ -25,7 +25,7 @@ for (i = 1; i < 128; ++i){
 uint8_t *twi_buff;
 uint8_t byteIndex;
 static uint8_t twi_mode = 0;
-static volatile status = 0xF8;
+static volatile uint8_t status = 0xF8;
 static uint8_t twiReady;
 
 

@@ -7,7 +7,7 @@
  */ 
 #include "PT63xx.h"
 #include "gpio_driver.h"
-
+#include <stdint.h>
 
 uint8_t vfd_buff[64];
 
@@ -37,7 +37,7 @@ void pt63Init(void){
 	 gpio_set_pin_level(&vfd_stdb, true);
 	 vfd_buff[0] = 0x40;
 	 vfd_buff[1] = 0xc0;
-	 writeData(&vfd_buff, 49);
+	 writeData((uint8_t *)&vfd_buff, 49);
 	 writeCmd(0x0a);
 	 
 	 
@@ -51,25 +51,20 @@ void setIcon(uint8_t tile_address, uint8_t tile_status){
 	vfd_buff[0] = 0x40;
 	vfd_buff[1] = tile_address;
 	vfd_buff[2] = (tile_status) ? 0xFF : 0; 
-	writeData(&vfd_buff, 3);
+	writeData((uint8_t *)&vfd_buff, 3);
 }
 void setTile(uint8_t tile_address, uint16_t tile_data){
 	vfd_buff[0] = 0x40;
 	if(tile_address == TILE_DISK){
 		vfd_buff[1] = tile_address;
 		vfd_buff[2] = tile_data;
-		writeData(&vfd_buff, 3);
+		writeData((uint8_t *)&vfd_buff, 3);
 	}else{
 		vfd_buff[1] = tile_address;
 		vfd_buff[2] = tile_data >> 8;
 		vfd_buff[3] = tile_data & 0xff;
-		writeData(&vfd_buff, 4);
+		writeData((uint8_t *)&vfd_buff, 4);
 	}
-	
-	
-
-	
-	
 }
 
 	
@@ -85,7 +80,7 @@ void writeChars(uint8_t *data, uint8_t len){
 	vfd_buff[1] = char_order[n];
 	vfd_buff[2] = char_table_up[tmp];
 	vfd_buff[3] = char_table_low[tmp];
-	writeData(&vfd_buff, 4);
+	writeData((uint8_t *)&vfd_buff, 4);
 	}
 }	
 
@@ -96,18 +91,18 @@ void writeDigits(uint8_t *data, uint8_t dot, uint8_t len){
 		vfd_buff[0] = 0x40;
 		vfd_buff[1] = digit_order[n];
 		vfd_buff[2] = (dot) ? digit_table[tmp] | 0x80 :  digit_table[tmp];
-		writeData(&vfd_buff, 3);
+		writeData((uint8_t *)&vfd_buff, 3);
 	}
 }
 	
-static void writeCmd(uint8_t cmd){
+void writeCmd(uint8_t cmd){
 	gpio_set_pin_level(&vfd_cs, true);
 	vfd_write_byte(cmd);
 	gpio_set_pin_level(&vfd_cs, false);
 }
 
 
-static void writeData(uint8_t *data, uint8_t len){
+void writeData(uint8_t *data, uint8_t len){
 	uint8_t n;
 	gpio_set_pin_level(&vfd_cs, true);
 	vfd_write_byte(data[0]);
@@ -122,7 +117,7 @@ static void writeData(uint8_t *data, uint8_t len){
 	
 }
 
-static void vfd_write_byte(uint8_t data){
+void vfd_write_byte(uint8_t data){
 	unsigned char n;
 	for(n=0; n<8; n++)
 	{
