@@ -19,11 +19,14 @@
 #include "adc_hal.h"
 #include "gpio_driver.h"
 #include "PT63xx.h"
+#include "ISL29034.h"
 #include "rtc.h"
 //#include "twi_hal0.h"
 #include "twi_hal1.h"
 #include "uart_hal.h"
 
+
+uint8_t light_addr = 0x44;
 
 gpio rtc_int = {(uint8_t *)&PORTD , PORTD2};
 gpio ld1 = {(uint8_t *)&PORTB , PORTB5};		//debug led
@@ -41,7 +44,7 @@ rtc_date sys_rtc = {
 	
 uint8_t rtc_int_request = 0;
 uint16_t counter = 0;
-
+uint8_t disc = 0;
 
 ISR(INT0_vect){
 	rtc_int_request=1; //RTC New data ready
@@ -67,9 +70,12 @@ int main(void)
    
    pt63Init();
    pt63SetBrightness(10);
+   ISL29034_init(POWER_RUN, RES_16_BIT, LUX_1000);
+   
    setIcon(TILE_AUTO, true);	 
    setIcon(TILE_USB, true);
-    while (1) 
+    
+	while (1) 
     {
 		
 		
@@ -88,7 +94,7 @@ int main(void)
 		//setTile(TILE_NETRING, 0xffff);
 		
 		//setTile(TILE_BINFIELD, 0xffff);
-		//setTile(TILE_DISK, 0xff);
+		
 		//
 		//_delay_ms(50);
 		//setIcon(TILE_TRANS, false);
@@ -110,12 +116,19 @@ int main(void)
 		if (rtc_int_request){
 			rtc_sync(&sys_rtc);
 			
-			sprintf(char_array, "%02d-%02d", sys_rtc.month, sys_rtc.date);
+			//sprintf(char_array, "%02d-%02d", sys_rtc.month, sys_rtc.date);
+			sprintf(char_array, "%05d", read_light_intensity());
+			
 			writeChars((void *)char_array, 5);
 			sprintf(char_array, "%02d%02d%02d", sys_rtc.hour, sys_rtc.minute, sys_rtc.second);
 			writeDigits((void *)char_array, 1, 6);
 			setTile(TILE_BINFIELD, counter);
 			setTile(TILE_OTHER, (redDotLine << 8));
+			setTile(TILE_DISK, discGetSegment(disc, FILL_LEFT));
+			disc++;
+			if(disc >= 9) {disc = 0;}
+			
+			
 			redDotLine = redDotLine << 1;
 			redDotLine = (redDotLine > 8) ? 1 : redDotLine;
 			

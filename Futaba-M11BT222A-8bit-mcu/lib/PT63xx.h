@@ -33,12 +33,18 @@
 #define  TILE_OTHER		0xd9
 #define  TILE_BINFIELD	0xdb
 
+#define  FILL_SEGMENT	0
+#define  FILL_LEFT		1
+#define  FILL_RIGHT		2
+
+	
 #endif
 
 void pt63Init(void);
 void pt63SetBrightness(uint8_t brightness);
 void setIcon(uint8_t tile_address, uint8_t tile_status);
 void setTile(uint8_t tile_address, uint16_t tile_data);
+uint8_t discGetSegment(uint8_t arg, uint8_t fillingType);
 void writeChars(uint8_t *data, uint8_t len);
 void writeDigits(uint8_t *data, uint8_t dot, uint8_t len);
 void writeCmd(uint8_t cmd);
